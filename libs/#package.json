@@ -1,0 +1,23 @@
+{
+  "name": "automotive",
+  "description": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+    "devDependencies" : {
+    "fs": "0.0.1-security",
+    "node-fs":"0.1.7",
+    "jQuery":"1.7.4",
+    "express":"4.15.3"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashleygwilliams/my_package/issues"
+  },
+  "homepage": "https://github.com/ashleygwilliams/my_package"
+}

@@ -1,0 +1,117 @@
+<html>
+    <head>
+    
+        <style>
+            html{
+                box-sizing: border-box;
+                margin:0;
+                overflow-y: hidden;
+            }        
+            .content{
+                width: 45%;
+                padding-left:1%;
+                padding-right:1%;
+                height:95%;
+                float:left;
+            }
+            
+            .padding{
+                width: 100%;
+                height: 9em;
+            }
+            
+            .jsviews{
+                margin-top: 0;
+            }
+            .console{
+                margin-top: 3em;
+            }
+            .fileinput{
+                margin-top:6em;
+            }
+        
+            textarea{
+                width:100%;
+                height:100%;
+            }
+            
+            button{
+                margin:1em;
+            }
+            
+            .uploader{
+                padding:3em;
+            }
+            
+            .editor_padding{
+                width: 100%;
+                height:100%;
+            }
+            #jsviews{
+                overflow-y: scroll;
+                font-family: monospace;
+                color:white;
+                background: black;
+            }    
+            #editor{
+                overflow-y: scroll;
+                font-family: monospace;
+                color:white;
+                background: black;
+            }    
+            #console{
+                overflow-y: scroll;
+                font-family: monospace;
+                color:white;
+                background: black;
+            }    
+        </style>
+    
+    <!-- 
+        répondre à la problematique suivante:
+        developper l'app avec cette interface, 
+        soit une portion pour insérer les liens script js, 
+        une portion pour uploader les fichier html a parser, 
+        une portion où l'on voit le résulat de la console. 
+    -->    
+        
+    <title>Dev environnement</title>        
+        <script src='jquery.min.js'></script>
+        <script src="test.js"></script>
+    </head>
+        <body>
+            <section class="content">
+                 <form>
+                    <div class="editor_padding">
+                        <textarea id="editor"></textarea>
+                         <button onclick='edit()'>Edit</button>
+                    </div>
+                </form>                 
+            </section>
+
+            <section class="content">
+                <div class="padding jsviews">
+                    <form>
+                        <textarea id="jsviews"></textarea>
+                        <button onclick='refresh_dependencies()'>Edit</button>
+                    </form>        
+                </div>
+                
+                <div class="padding console">
+                    <form>
+                        <textarea id="console"></textarea>
+                        <button onclick="reload()">Reload</button>
+                    </form>
+                </div>
+            
+                <div class="padding fileinput">
+                    <form>
+                        File to send: <input type="file" id="fileInput"><br><br>
+                        <button onclick="HtmlLoader()">Send</button>
+                    </form>
+                </div>   
+            </section>    
+        <script>
+        </script>    
+    </body>
+</html>

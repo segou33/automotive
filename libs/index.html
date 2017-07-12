@@ -1,0 +1,156 @@
+<html>
+    <head>
+    
+        <style>
+            html{
+                box-sizing: border-box;
+                margin:0;
+                overflow-y: hidden;
+            }        
+            .content{
+                width: 45%;
+                padding-left:1%;
+                padding-right:1%;
+                height:95%;
+                float:left;
+            }
+            
+            .padding{
+                width: 100%;
+                height: 9em;
+            }
+            
+            .jsviews{
+                margin-top: 0;
+            }
+            .console{
+                margin-top: 3em;
+            }
+            .fileinput{
+                margin-top:6em;
+            }
+        
+            textarea{
+                width:100%;
+                height:100%;
+            }
+            
+            button{
+                margin:1em;
+            }
+            
+            .uploader{
+                padding:3em;
+            }
+            
+            .editor_padding{
+                width: 100%;
+                height:100%;
+            }
+            #jsviews{
+                overflow-y: scroll;
+                font-family: monospace;
+                color:white;
+                background: black;
+            }    
+            #editor{
+                overflow-y: scroll;
+                font-family: monospace;
+                color:white;
+                background: black;
+            }    
+            #console{
+                overflow-y: scroll;
+                font-family: monospace;
+                color:white;
+                background: black;
+            }    
+        </style>
+    
+    <!-- 
+        répondre à la problematique suivante:
+        developper l'app avec cette interface, 
+        soit une portion pour insérer les liens script js, 
+        une portion pour uploader les fichier html a parser, 
+        une portion où l'on voit le résulat de la console. 
+    -->    
+        
+    <title>Dev environnement</title>        
+        <script src='jquery.min.js'></script>
+        <script src="test.js"></script>
+    </head>
+        <body>
+            <section class="content">
+                 <form>
+                    <div class="editor_padding">
+                        <textarea id="editor"></textarea>
+                         <button onclick='edit()'>Edit</button>
+                    </div>
+                </form>                 
+            </section>
+
+            <section class="content">
+                <div class="padding jsviews">
+                    <form>
+                        <textarea id="jsviews"></textarea>
+                        <button onclick='refresh_dependencies()'>Edit</button>
+                    </form>        
+                </div>
+                
+                <div class="padding console">
+                    <form>
+                        <textarea id="console"></textarea>
+                        <button onclick="reload()">Reload</button>
+                    </form>
+                </div>
+            
+                <div class="padding fileinput">
+                    <form>
+                        File to send: <input type="file" id="fileInput"><br><br>
+                        <button onclick="HtmlLoader()">Send</button>
+                    </form>
+                </div>   
+            </section>    
+        <script>
+            
+        /*    
+            //document.getElementsByTagName('html')[0].innerHTML
+            function () {
+                var dep = document.getElementsById('dependencies').innerHTML;
+                console.log(dep.toString());
+                console.log('fr')
+                document.getElementById("jsviews").innerHTML = dep;
+            };
+            
+
+            //enable dependency refresh.
+            var refresh_dependencies = function(e){
+                e.preventDefault;
+                
+                var txt = document.getElementById("jsviews").value;
+                document.getElementById("jsviews").innerHTML = txt;
+            };
+            
+            var clear_console = function(){
+                
+                
+            }
+          */  
+            /*
+            
+            (function () {
+                var old = console.log;
+                var logger = document.getElementById('console');
+                console.log = function (message) {
+                if (typeof message == 'object') {
+                    logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : message) + '<br />';
+                } else {
+                    logger.innerHTML += message +'\n';
+                }
+                }
+            });      
+
+*/
+        </script>    
+    </body>
+</html>
